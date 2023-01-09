@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5cfd81d9424e475d8d4359608c6de114" Name="Diagram1">
+        <EntityTypeShape EntityType="pukhoappModel.about" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pukhoappModel.recent" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pukhoappModel.database_firewall_rules" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pukhoappModel.ipv6_database_firewall_rules" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pukhoappModel.sysdiagrams" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="pukhoappModel.Carts" Width="1.5" PointX="14.125" PointY="3" />
+        <EntityTypeShape EntityType="pukhoappModel.Categories" Width="1.5" PointX="9.625" PointY="8" />
+        <EntityTypeShape EntityType="pukhoappModel.person" Width="1.5" PointX="9.625" PointY="2" />
+        <EntityTypeShape EntityType="pukhoappModel.Products" Width="1.5" PointX="11.875" PointY="2.5" />
+        <EntityTypeShape EntityType="pukhoappModel.Roles" Width="1.5" PointX="7.375" PointY="3" />
+        <AssociationConnector Association="pukhoappModel.FK_Carts_person" />
+        <AssociationConnector Association="pukhoappModel.FK_Carts_Products" />
+        <AssociationConnector Association="pukhoappModel.FK_Products_Categories1" />
+        <AssociationConnector Association="pukhoappModel.FK_person_Roles" />
+        <AssociationConnector Association="pukhoappModel.FK_Products_person1" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

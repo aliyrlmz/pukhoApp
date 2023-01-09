@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA217D13-CB0D-4D36-A95A-680B46BCBCAE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pukhoApp</RootNamespace>
+    <AssemblyName>pukhoApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroSet UI, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MetroSet_UI.2.0.0\lib\net45\MetroSet UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.FakeDb, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Sitecore.FakeDb.2.0.1\lib\net471\Sitecore.FakeDb.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard\adminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\adminDashboard.Designer.cs">
+      <DependentUpon>adminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\adminProductdetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\adminProductdetails.Designer.cs">
+      <DependentUpon>adminProductdetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\userDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\userDashboard.Designer.cs">
+      <DependentUpon>userDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\startupDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\startupDashboard.Designer.cs">
+      <DependentUpon>startupDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonHelpers\GeneralHelper.cs" />
+    <Compile Include="Models\about.cs">
+      <DependentUpon>pukhoappModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Carts.cs">
+      <DependentUpon>pukhoappModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Categories.cs">
+      <DependentUpon>pukhoappModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Constants\Helpers.cs" />
+    <Compile Include="Models\Constants\VariableConstants.cs" />
+    <Compile Include="Models\database_firewall_rules.cs">
+      <DependentUpon>pukhoappModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ipv6_database_firewall_rules.cs">
+      <DependentUpon>pukhoappModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\person.cs">
+      <DependentUpon>pukhoappModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Products.cs">
+      <DependentUpon>pukhoappModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pukhoappModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pukhoappModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pukhoappModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pukhoappModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pukhoappModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pukhoappModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\recent.cs">
+      <DependentUpon>pukhoappModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Roles.cs">
+      <DependentUpon>pukhoappModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>pukhoappModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dashboard\adminDashboard.resx">
+      <DependentUpon>adminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\adminProductdetails.resx">
+      <DependentUpon>adminProductdetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\userDashboard.resx">
+      <DependentUpon>userDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\startupDashboard.resx">
+      <DependentUpon>startupDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="Models\pukhoappModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>pukhoappModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\pukhoappModel.edmx.diagram">
+      <DependentUpon>pukhoappModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\pukhoApp.Dashboard.userDashboard+Root.datasource" />
+    <None Include="Properties\DataSources\pukhoApp.Dashboard.userDashboard.datasource" />
+    <None Include="Properties\DataSources\pukhoApp.Models.Categories.datasource" />
+    <None Include="Properties\DataSources\pukhoApp.Models.person.datasource" />
+    <None Include="Properties\DataSources\pukhoApp.Models.Products.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pukhoNightIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pukhoAppLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pukhoSunIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\pukhoappModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>pukhoappModel.edmx</DependentUpon>
+      <LastGenOutput>pukhoappModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\pukhoappModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>pukhoappModel.edmx</DependentUpon>
+      <LastGenOutput>pukhoappModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\pukhoAppLogoDark.png" />
+    <Content Include="Resources\pukhoAppLogoDark2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
